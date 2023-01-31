@@ -2,18 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:instagram_application/screens/main_screen.dart';
 
 void main() {
-  runApp(Application());
+  runApp(const MyApp());
 }
 
-class Application extends StatelessWidget {
-  const Application({Key? key}) : super(key: key);
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        textTheme: TextTheme(
-          headline4: TextStyle(
+        textTheme: const TextTheme(
+          headlineMedium: TextStyle(
             fontFamily: 'GB',
             fontSize: 16,
             fontWeight: FontWeight.w700,
@@ -22,11 +22,11 @@ class Application extends StatelessWidget {
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            primary: Color(0xffF35383),
+            backgroundColor: const Color(0xffF35383),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(15),
             ),
-            textStyle: TextStyle(
+            textStyle: const TextStyle(
               fontFamily: 'GB',
               fontSize: 16,
               fontWeight: FontWeight.w700,
@@ -35,7 +35,7 @@ class Application extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: MainScreen(),
+      home: const MainScreen(),
     );
   }
 }
@@ -50,7 +50,6 @@ class SplashScreen extends StatelessWidget {
         image: DecorationImage(
           repeat: ImageRepeat.repeat,
           image: AssetImage('images/Bahador1.jpg'),
-          // image: AssetImage('images/pattern1.png'),
         ),
       ),
       child: Scaffold(
@@ -58,8 +57,8 @@ class SplashScreen extends StatelessWidget {
         body: Stack(
           alignment: AlignmentDirectional.bottomCenter,
           children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 80),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 80),
               child: Center(
                 child: Image(
                   image: AssetImage('images/logo_splash.png'),
@@ -69,7 +68,7 @@ class SplashScreen extends StatelessWidget {
             Positioned(
               bottom: 32,
               child: Column(
-                children: [
+                children: const [
                   Text(
                     'From',
                     style: TextStyle(color: Colors.grey),

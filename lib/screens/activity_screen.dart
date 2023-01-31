@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:instagram_application/model/enums/activity_type_enum.dart';
 
 class ActivityScreen extends StatefulWidget {
-  ActivityScreen({Key? key}) : super(key: key);
+  const ActivityScreen({Key? key}) : super(key: key);
 
   @override
   State<ActivityScreen> createState() => _ActivityScreenState();
@@ -31,7 +31,6 @@ class _ActivityScreenState extends State<ActivityScreen>
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _tabController = TabController(length: 2, vsync: this);
   }
@@ -39,23 +38,23 @@ class _ActivityScreenState extends State<ActivityScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff1C1F2E),
+      backgroundColor: const Color(0xff1C1F2E),
       body: SafeArea(
         child: Column(
           children: [
             Container(
               height: 70,
-              color: Color(0xff1C1F2E),
+              color: const Color(0xff1C1F2E),
               child: TabBar(
                 controller: _tabController,
-                labelStyle: TextStyle(
+                labelStyle: const TextStyle(
                   fontSize: 20,
                   fontFamily: 'GB',
                 ),
-                indicatorPadding: EdgeInsets.symmetric(horizontal: 20),
+                indicatorPadding: const EdgeInsets.symmetric(horizontal: 20),
                 indicatorWeight: 5,
-                indicatorColor: Color(0xffF35383),
-                tabs: [
+                indicatorColor: const Color(0xffF35383),
+                tabs: const [
                   Tab(
                     text: 'Following',
                   ),
@@ -83,7 +82,7 @@ class _ActivityScreenState extends State<ActivityScreen>
   Widget _getSampleList() {
     return CustomScrollView(
       slivers: [
-        SliverToBoxAdapter(
+        const SliverToBoxAdapter(
           child: Padding(
             padding: EdgeInsets.only(
               left: 30.0,
@@ -129,7 +128,7 @@ class _ActivityScreenState extends State<ActivityScreen>
             childCount: 1,
           ),
         ),
-        SliverToBoxAdapter(
+        const SliverToBoxAdapter(
           child: Padding(
             padding: EdgeInsets.only(
               left: 30.0,
@@ -190,7 +189,7 @@ class _ActivityScreenState extends State<ActivityScreen>
             childCount: 1,
           ),
         ),
-        SliverToBoxAdapter(
+        const SliverToBoxAdapter(
           child: Padding(
             padding: EdgeInsets.only(
               left: 30.0,
@@ -258,23 +257,23 @@ class _ActivityScreenState extends State<ActivityScreen>
   Widget _getRow(
       ActivityStatus status, String text1, String text2, Image image) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: 20, horizontal: 18),
+      padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 18),
       child: Row(
         children: [
           Container(
             height: 6,
             width: 6,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Color(0xffF35383),
               shape: BoxShape.circle,
             ),
           ),
-          SizedBox(width: 7),
+          const SizedBox(width: 7),
           SizedBox(
             width: 40,
             height: 40,
             child: ClipRRect(
-              borderRadius: BorderRadius.all(
+              borderRadius: const BorderRadius.all(
                 Radius.circular(10),
               ),
               child: FittedBox(
@@ -284,7 +283,7 @@ class _ActivityScreenState extends State<ActivityScreen>
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             width: 10,
           ),
           Column(
@@ -294,18 +293,18 @@ class _ActivityScreenState extends State<ActivityScreen>
                 children: [
                   Text(
                     text1,
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.white,
                       fontSize: 12,
                       fontFamily: 'GB',
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 7,
                   ),
                   Text(
                     text2,
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Color(0xffC5C5C5),
                       fontSize: 12,
                       fontFamily: 'GM',
@@ -314,7 +313,7 @@ class _ActivityScreenState extends State<ActivityScreen>
                 ],
               ),
               Row(
-                children: [
+                children: const [
                   Text(
                     'you',
                     style: TextStyle(
@@ -338,7 +337,7 @@ class _ActivityScreenState extends State<ActivityScreen>
               ),
             ],
           ),
-          Spacer(),
+          const Spacer(),
           _getActionActivityRow(status)
         ],
       ),
@@ -350,18 +349,18 @@ class _ActivityScreenState extends State<ActivityScreen>
       case ActivityStatus.followBack:
         return ElevatedButton(
           style: ElevatedButton.styleFrom(
-            primary: Color(0xffF35383),
+            backgroundColor: const Color(0xffF35383),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(6),
             ),
-            textStyle: TextStyle(
+            textStyle: const TextStyle(
               fontFamily: 'GB',
               fontSize: 16,
               fontWeight: FontWeight.w700,
             ),
           ),
           onPressed: () {},
-          child: Text(
+          child: const Text(
             'Follow',
           ),
         );
@@ -371,7 +370,7 @@ class _ActivityScreenState extends State<ActivityScreen>
           width: 40,
           height: 40,
           child: ClipRRect(
-            borderRadius: BorderRadius.all(
+            borderRadius: const BorderRadius.all(
               Radius.circular(10),
             ),
             child: FittedBox(
@@ -383,18 +382,18 @@ class _ActivityScreenState extends State<ActivityScreen>
       case ActivityStatus.following:
         return OutlinedButton(
           onPressed: () {},
-          child: Text(
+          style: OutlinedButton.styleFrom(
+            side: const BorderSide(
+              color: Color(0xffC5C5C5),
+              width: 2,
+            ),
+          ),
+          child: const Text(
             'Message',
             style: TextStyle(
               fontSize: 12,
               fontFamily: 'GB',
               color: Color(0xffC5C5C5),
-            ),
-          ),
-          style: OutlinedButton.styleFrom(
-            side: BorderSide(
-              color: Color(0xffC5C5C5),
-              width: 2,
             ),
           ),
         );
@@ -402,18 +401,18 @@ class _ActivityScreenState extends State<ActivityScreen>
       default:
         return OutlinedButton(
           onPressed: () {},
-          child: Text(
+          style: OutlinedButton.styleFrom(
+            side: const BorderSide(
+              color: Color(0xffC5C5C5),
+              width: 2,
+            ),
+          ),
+          child: const Text(
             'Message',
             style: TextStyle(
               fontSize: 12,
               fontFamily: 'GB',
               color: Color(0xffC5C5C5),
-            ),
-          ),
-          style: OutlinedButton.styleFrom(
-            side: BorderSide(
-              color: Color(0xffC5C5C5),
-              width: 2,
             ),
           ),
         );

@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
 class AddContentScreen extends StatelessWidget {
@@ -8,7 +6,7 @@ class AddContentScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff1C1F2E),
+      backgroundColor: const Color(0xff1C1F2E),
       body: SafeArea(
         child: Stack(
           alignment: AlignmentDirectional.bottomCenter,
@@ -17,7 +15,7 @@ class AddContentScreen extends StatelessWidget {
             Container(
               height: 83,
               width: double.infinity,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Color(0xff272B40),
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(15),
@@ -25,11 +23,11 @@ class AddContentScreen extends StatelessWidget {
                 ),
               ),
               child: Padding(
-                padding: EdgeInsets.only(top: 10, right: 18, left: 18),
+                padding: const EdgeInsets.only(top: 10, right: 18, left: 18),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
+                  children: const [
                     Text(
                       'Draft',
                       style: TextStyle(
@@ -74,9 +72,9 @@ class AddContentScreen extends StatelessWidget {
           child: _getSelectedImageContainer(),
         ),
         SliverPadding(
-          padding: EdgeInsets.symmetric(horizontal: 18),
+          padding: const EdgeInsets.symmetric(horizontal: 18),
           sliver: SliverGrid(
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 3,
               mainAxisSpacing: 10,
               crossAxisSpacing: 10,
@@ -84,13 +82,13 @@ class AddContentScreen extends StatelessWidget {
             delegate: SliverChildBuilderDelegate(
               (context, index) {
                 return Container(
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(
                       Radius.circular(10),
                     ),
                   ),
                   child: ClipRRect(
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                    borderRadius: const BorderRadius.all(Radius.circular(10)),
                     child: FittedBox(
                       fit: BoxFit.cover,
                       child: Image.asset('images/s$index.jpg'),
@@ -103,25 +101,25 @@ class AddContentScreen extends StatelessWidget {
             ),
           ),
         ),
-        SliverPadding(
+        const SliverPadding(
           padding: EdgeInsets.only(bottom: 100),
         ),
       ],
     );
   }
 
-  Container _getSelectedImageContainer() {
+  Widget _getSelectedImageContainer() {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 18, vertical: 5),
+      padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 5),
       height: 394,
       width: double.infinity,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         borderRadius: BorderRadius.all(
           Radius.circular(10),
         ),
       ),
       child: ClipRRect(
-        borderRadius: BorderRadius.all(Radius.circular(15)),
+        borderRadius: const BorderRadius.all(Radius.circular(15)),
         child: FittedBox(
           fit: BoxFit.cover,
           child: Image.asset('images/vil.jpg'),
@@ -132,10 +130,10 @@ class AddContentScreen extends StatelessWidget {
 
   Padding _getHeaderSection() {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 18, vertical: 27),
+      padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 27),
       child: Row(
         children: [
-          Text(
+          const Text(
             'Post',
             style: TextStyle(
               fontFamily: 'GB',
@@ -143,12 +141,12 @@ class AddContentScreen extends StatelessWidget {
               fontSize: 24,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             width: 10,
           ),
           Image.asset('images/icon_arrow_down.png'),
-          Spacer(),
-          Text(
+          const Spacer(),
+          const Text(
             'Next',
             style: TextStyle(
               fontFamily: 'GB',
@@ -156,7 +154,7 @@ class AddContentScreen extends StatelessWidget {
               fontSize: 16,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             width: 5,
           ),
           Image.asset('images/icon_arrow_right_box.png'),

@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class ShareBottomSheet extends StatelessWidget {
   ShareBottomSheet({this.controller, Key? key}) : super(key: key);
 
-  List<String> myProfile = [
+  final List<String> myProfile = [
     'images/ben2.jpg',
     'images/game1.jpg',
     'images/sh.jpg',
@@ -23,7 +23,7 @@ class ShareBottomSheet extends StatelessWidget {
     'images/sh.jpg',
     'images/amin.jpg',
   ];
-  List<String> myText2 = [
+  final List<String> myText2 = [
     'bahador_22',
     'dark_knight256',
     'burstlinkerzero',
@@ -46,15 +46,15 @@ class ShareBottomSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
-      borderRadius: BorderRadius.only(
+      borderRadius: const BorderRadius.only(
         topLeft: Radius.circular(20),
         topRight: Radius.circular(20),
       ),
       child: BackdropFilter(
         filter: ImageFilter.blur(sigmaX: 40.0, sigmaY: 40.0),
         child: Container(
-          color: Color.fromRGBO(255, 255, 255, 0.09),
-          padding: EdgeInsets.symmetric(horizontal: 44),
+          color: const Color.fromRGBO(255, 255, 255, 0.09),
+          padding: const EdgeInsets.symmetric(horizontal: 44),
           child: _getContent(context),
         ),
       ),
@@ -74,7 +74,7 @@ class ShareBottomSheet extends StatelessWidget {
                   Container(
                     width: 67,
                     height: 5,
-                    margin: EdgeInsets.only(top: 10, bottom: 20),
+                    margin: const EdgeInsets.only(top: 10, bottom: 20),
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(100)),
@@ -82,7 +82,7 @@ class ShareBottomSheet extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
+                      const Text(
                         'share',
                         style: TextStyle(
                           fontFamily: 'GB',
@@ -93,17 +93,17 @@ class ShareBottomSheet extends StatelessWidget {
                       Image.asset('images/icon_share_bottomsheet.png'),
                     ],
                   ),
-                  SizedBox(height: 32),
+                  const SizedBox(height: 32),
                   Container(
                     height: 46,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(13),
-                      color: Color.fromRGBO(255, 255, 255, 0.4),
+                      color: const Color.fromRGBO(255, 255, 255, 0.4),
                     ),
                     child: Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 10),
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
                       child: Row(
-                        children: [
+                        children: const [
                           Icon(
                             Icons.search,
                             color: Colors.white,
@@ -127,7 +127,7 @@ class ShareBottomSheet extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: 32),
+                  const SizedBox(height: 32),
                 ],
               ),
             ),
@@ -141,14 +141,14 @@ class ShareBottomSheet extends StatelessWidget {
                 }),
                 childCount: myProfile.length,
               ),
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 4,
                 crossAxisSpacing: 20,
                 mainAxisSpacing: 10,
                 mainAxisExtent: 120,
               ),
             ),
-            SliverPadding(
+            const SliverPadding(
               padding: EdgeInsets.only(top: 120),
             ),
           ],
@@ -157,7 +157,7 @@ class ShareBottomSheet extends StatelessWidget {
           bottom: 47,
           child: ElevatedButton(
             onPressed: () {},
-            child: Padding(
+            child: const Padding(
               padding: EdgeInsets.symmetric(horizontal: 45, vertical: 13),
               child: Text(
                 'Share',
@@ -178,18 +178,18 @@ class ShareBottomSheet extends StatelessWidget {
         Container(
           width: 60,
           height: 60,
-          decoration: BoxDecoration(),
+          decoration: const BoxDecoration(),
           child: ClipRRect(
-            borderRadius: BorderRadius.all(Radius.circular(15)),
+            borderRadius: const BorderRadius.all(Radius.circular(15)),
             // child: Image.asset('images/profile.png'),
             child: image,
           ),
         ),
-        SizedBox(height: 10),
+        const SizedBox(height: 10),
         Text(
           text,
           textAlign: TextAlign.center,
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.white,
             fontFamily: 'GB',
             fontSize: 12,

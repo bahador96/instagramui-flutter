@@ -8,7 +8,7 @@ class SwitchAccountScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff1C1F2E),
+      backgroundColor: const Color(0xff1C1F2E),
       body: Column(
         children: [
           Expanded(
@@ -16,7 +16,7 @@ class SwitchAccountScreen extends StatelessWidget {
               alignment: AlignmentDirectional.center,
               children: [
                 Container(
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage('images/switch_account_background.png'),
                       fit: BoxFit.cover,
@@ -34,7 +34,7 @@ class SwitchAccountScreen extends StatelessWidget {
                       child: Container(
                         height: 352,
                         width: 342,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           gradient: LinearGradient(
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,
@@ -49,23 +49,23 @@ class SwitchAccountScreen extends StatelessWidget {
                         ),
                         child: Column(
                           children: [
-                            SizedBox(
+                            const SizedBox(
                               height: 32,
                             ),
-                            Image(
+                            const Image(
                               width: 150.0,
                               height: 125.0,
                               // image: AssetImage('images/profile.png'),
                               image: AssetImage('images/ben.jpg'),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 20,
                             ),
                             Text(
                               'Bahador Fouladi',
-                              style: Theme.of(context).textTheme.headline4,
+                              style: Theme.of(context).textTheme.headlineMedium,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 20,
                             ),
                             SizedBox(
@@ -75,17 +75,17 @@ class SwitchAccountScreen extends StatelessWidget {
                                 style:
                                     Theme.of(context).elevatedButtonTheme.style,
                                 onPressed: () {},
-                                child: Text(
+                                child: const Text(
                                   'Confirm',
                                 ),
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 20,
                             ),
                             Text(
                               'switch account',
-                              style: Theme.of(context).textTheme.headline4,
+                              style: Theme.of(context).textTheme.headlineMedium,
                             ),
                           ],
                         ),
@@ -97,7 +97,7 @@ class SwitchAccountScreen extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(top: 132, bottom: 63),
+            padding: const EdgeInsets.only(top: 132, bottom: 63),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -110,7 +110,7 @@ class SwitchAccountScreen extends StatelessWidget {
                     fontFamily: 'GB',
                   ),
                 ),
-                Text(
+                const Text(
                   'Sign Up',
                   style: TextStyle(
                     color: Colors.white,

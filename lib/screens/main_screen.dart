@@ -6,7 +6,7 @@ import 'package:instagram_application/screens/search_screen.dart';
 import 'package:instagram_application/screens/user_profile_screen.dart';
 
 class MainScreen extends StatefulWidget {
-  MainScreen({Key? key}) : super(key: key);
+  const MainScreen({Key? key}) : super(key: key);
 
   @override
   State<MainScreen> createState() => _MainScreenState();
@@ -20,20 +20,20 @@ class _MainScreenState extends State<MainScreen> {
       backgroundColor: Colors.transparent,
       extendBody: true,
       bottomNavigationBar: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(17),
             topRight: Radius.circular(17),
           ),
         ),
         child: ClipRRect(
-          borderRadius: BorderRadius.only(
+          borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(17),
             topRight: Radius.circular(17),
           ),
           child: BottomNavigationBar(
             type: BottomNavigationBarType.fixed,
-            backgroundColor: Color(0xff1C1F2E),
+            backgroundColor: const Color(0xff1C1F2E),
             currentIndex: _selectedBottomNavigationItem,
             onTap: (int index) {
               setState(() {
@@ -77,16 +77,16 @@ class _MainScreenState extends State<MainScreen> {
                   width: 30,
                   height: 30,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(
+                    borderRadius: const BorderRadius.all(
                       Radius.circular(8),
                     ),
                     border: Border.all(
                       width: 2,
-                      color: Color(0xffC5C5C5),
+                      color: const Color(0xffC5C5C5),
                     ),
                   ),
                   child: ClipRRect(
-                    borderRadius: BorderRadius.all(Radius.circular(8)),
+                    borderRadius: const BorderRadius.all(Radius.circular(8)),
                     child: FittedBox(
                       fit: BoxFit.cover,
                       child: Image.asset('images/ben2.jpg'),
@@ -97,16 +97,16 @@ class _MainScreenState extends State<MainScreen> {
                   width: 30,
                   height: 30,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(
+                    borderRadius: const BorderRadius.all(
                       Radius.circular(8),
                     ),
                     border: Border.all(
                       width: 2,
-                      color: Color(0xffF35383),
+                      color: const Color(0xffF35383),
                     ),
                   ),
                   child: ClipRRect(
-                    borderRadius: BorderRadius.all(Radius.circular(8)),
+                    borderRadius: const BorderRadius.all(Radius.circular(8)),
                     child: FittedBox(
                       fit: BoxFit.cover,
                       child: Image.asset('images/ben2.jpg'),
@@ -130,10 +130,10 @@ class _MainScreenState extends State<MainScreen> {
   List<Widget> getLayOut() {
     return <Widget>[
       HomeScreeen(),
-      SearchScreen(),
-      AddContentScreen(),
-      ActivityScreen(),
-      UserProfileScreen(),
+      const SearchScreen(),
+      const AddContentScreen(),
+      const ActivityScreen(),
+      const UserProfileScreen(),
     ];
   }
 }

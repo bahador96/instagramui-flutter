@@ -13,7 +13,6 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     neghban.addListener(() {
       setState(() {});
@@ -26,7 +25,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         gradient: LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
@@ -57,7 +56,7 @@ class _LoginScreenState extends State<LoginScreen> {
         ),
         Expanded(
           child: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Color(0xff1C1F2E),
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(20),
@@ -69,16 +68,16 @@ class _LoginScreenState extends State<LoginScreen> {
                 mainAxisSize: MainAxisSize.max,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     width: double.infinity,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 50,
                   ),
                   Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
+                    children: const [
                       Text(
                         'Sign in to ',
                         style: TextStyle(
@@ -91,26 +90,26 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 34,
                   ),
                   Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 44),
+                    padding: const EdgeInsets.symmetric(horizontal: 44),
                     child: TextField(
-                      style: TextStyle(color: Colors.white),
+                      style: const TextStyle(color: Colors.white),
                       focusNode: neghban,
                       decoration: InputDecoration(
-                        contentPadding:
-                            EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                        contentPadding: const EdgeInsets.symmetric(
+                            horizontal: 16, vertical: 16),
                         labelText: 'Email',
                         labelStyle: TextStyle(
                           color: neghban.hasFocus
-                              ? Color(0xffF35383)
+                              ? const Color(0xffF35383)
                               : Colors.white,
                           fontFamily: 'GM',
                           fontSize: 20,
                         ),
-                        enabledBorder: OutlineInputBorder(
+                        enabledBorder: const OutlineInputBorder(
                           borderRadius: BorderRadius.all(
                             Radius.circular(15),
                           ),
@@ -119,7 +118,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             width: 3,
                           ),
                         ),
-                        focusedBorder: OutlineInputBorder(
+                        focusedBorder: const OutlineInputBorder(
                           borderSide: BorderSide(
                             width: 3,
                             color: Color(0xffF35383),
@@ -128,26 +127,26 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 34,
                   ),
                   Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 44),
+                    padding: const EdgeInsets.symmetric(horizontal: 44),
                     child: TextField(
-                      style: TextStyle(color: Colors.white),
+                      style: const TextStyle(color: Colors.white),
                       focusNode: neghban1,
                       decoration: InputDecoration(
-                        contentPadding:
-                            EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                        contentPadding: const EdgeInsets.symmetric(
+                            horizontal: 16, vertical: 16),
                         labelText: 'Password',
                         labelStyle: TextStyle(
                           color: neghban1.hasFocus
-                              ? Color(0xffF35383)
+                              ? const Color(0xffF35383)
                               : Colors.white,
                           fontFamily: 'GM',
                           fontSize: 20,
                         ),
-                        enabledBorder: OutlineInputBorder(
+                        enabledBorder: const OutlineInputBorder(
                           borderRadius: BorderRadius.all(
                             Radius.circular(15),
                           ),
@@ -156,7 +155,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             width: 3,
                           ),
                         ),
-                        focusedBorder: OutlineInputBorder(
+                        focusedBorder: const OutlineInputBorder(
                           borderSide: BorderSide(
                             width: 3,
                             color: Color(0xffF35383),
@@ -165,27 +164,26 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
-                  Container(
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        fixedSize: Size(120, 30),
-                        textStyle: TextStyle(
-                          fontSize: 25,
-                          fontWeight: FontWeight.w900,
-                          color: Colors.white,
-                        ),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      fixedSize: const Size(120, 30),
+                      textStyle: const TextStyle(
+                        fontSize: 25,
+                        fontWeight: FontWeight.w900,
+                        color: Colors.white,
                       ),
-                      onPressed: () {},
-                      child: Text(
-                        'Sign in',
-                      ),
+                    ),
+                    onPressed: () {},
+                    child: const Text(
+                      'Sign in',
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 20, vertical: 20),
                     child: Row(
                       // mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -198,7 +196,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             fontFamily: 'GB',
                           ),
                         ),
-                        Text(
+                        const Text(
                           'Sign Up',
                           style: TextStyle(
                             color: Colors.white,
@@ -226,7 +224,7 @@ class _LoginScreenState extends State<LoginScreen> {
       top: 80,
       child: Column(
         children: [
-          Expanded(
+          const Expanded(
             child: Image(
               image: AssetImage('images/rocket.png'),
             ),

@@ -7,7 +7,7 @@ class UserProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff1C1F2E),
+      backgroundColor: const Color(0xff1C1F2E),
       body: DefaultTabController(
         length: 2,
         child: NestedScrollView(
@@ -16,17 +16,17 @@ class UserProfileScreen extends StatelessWidget {
               SliverAppBar(
                 // pinned: true,
                 toolbarHeight: 80,
-                actions: [
+                actions: const [
                   Padding(
                     padding: EdgeInsets.only(right: 18, top: 18),
                     child: Icon(Icons.menu),
                   ),
                 ],
                 bottom: PreferredSize(
-                  preferredSize: Size.fromHeight(10),
+                  preferredSize: const Size.fromHeight(10),
                   child: Container(
                     height: 14,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Color(0xff1C1F2E),
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(15),
@@ -35,7 +35,7 @@ class UserProfileScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                backgroundColor: Color(0xff1C1F2E),
+                backgroundColor: const Color(0xff1C1F2E),
                 expandedHeight: 200,
                 flexibleSpace: FlexibleSpaceBar(
                   background: Image.asset(
@@ -52,9 +52,9 @@ class UserProfileScreen extends StatelessWidget {
                 floating: true,
                 delegate: TabBarViewDelegate(
                   TabBar(
-                    indicatorPadding: EdgeInsets.only(bottom: 4),
+                    indicatorPadding: const EdgeInsets.only(bottom: 4),
                     indicatorWeight: 3,
-                    indicatorColor: Color(0xffF35383),
+                    indicatorColor: const Color(0xffF35383),
                     tabs: [
                       Tab(
                         icon: Image.asset('images/icon_tab_posts.png'),
@@ -73,19 +73,19 @@ class UserProfileScreen extends StatelessWidget {
               CustomScrollView(
                 slivers: [
                   SliverPadding(
-                    padding: EdgeInsets.only(top: 5, left: 18, right: 18),
+                    padding: const EdgeInsets.only(top: 5, left: 18, right: 18),
                     sliver: SliverGrid(
                       delegate: SliverChildBuilderDelegate(
                         (context, index) {
                           return Container(
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               borderRadius: BorderRadius.all(
                                 Radius.circular(10),
                               ),
                             ),
                             child: ClipRRect(
                               borderRadius:
-                                  BorderRadius.all(Radius.circular(10)),
+                                  const BorderRadius.all(Radius.circular(10)),
                               child: FittedBox(
                                 fit: BoxFit.cover,
                                 child: Image.asset('images/item$index.png'),
@@ -101,11 +101,11 @@ class UserProfileScreen extends StatelessWidget {
                         crossAxisSpacing: 10,
                         repeatPattern: QuiltedGridRepeatPattern.inverted,
                         pattern: [
-                          QuiltedGridTile(1, 1),
-                          QuiltedGridTile(2, 2),
-                          QuiltedGridTile(1, 1),
-                          QuiltedGridTile(1, 1),
-                          QuiltedGridTile(1, 1),
+                          const QuiltedGridTile(1, 1),
+                          const QuiltedGridTile(2, 2),
+                          const QuiltedGridTile(1, 1),
+                          const QuiltedGridTile(1, 1),
+                          const QuiltedGridTile(1, 1),
                         ],
                       ),
                     ),
@@ -115,19 +115,19 @@ class UserProfileScreen extends StatelessWidget {
               CustomScrollView(
                 slivers: [
                   SliverPadding(
-                    padding: EdgeInsets.only(top: 5),
+                    padding: const EdgeInsets.only(top: 5),
                     sliver: SliverGrid(
                       delegate: SliverChildBuilderDelegate(
                         (context, index) {
                           return Container(
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               borderRadius: BorderRadius.all(
                                 Radius.circular(10),
                               ),
                             ),
                             child: ClipRRect(
                               borderRadius:
-                                  BorderRadius.all(Radius.circular(10)),
+                                  const BorderRadius.all(Radius.circular(10)),
                               child: FittedBox(
                                 fit: BoxFit.cover,
                                 child: Image.asset('images/item$index.png'),
@@ -143,11 +143,11 @@ class UserProfileScreen extends StatelessWidget {
                         crossAxisSpacing: 10,
                         repeatPattern: QuiltedGridRepeatPattern.inverted,
                         pattern: [
-                          QuiltedGridTile(1, 1),
-                          QuiltedGridTile(2, 2),
-                          QuiltedGridTile(1, 1),
-                          QuiltedGridTile(1, 1),
-                          QuiltedGridTile(1, 1),
+                          const QuiltedGridTile(1, 1),
+                          const QuiltedGridTile(2, 2),
+                          const QuiltedGridTile(1, 1),
+                          const QuiltedGridTile(1, 1),
+                          const QuiltedGridTile(1, 1),
                         ],
                       ),
                     ),
@@ -163,7 +163,7 @@ class UserProfileScreen extends StatelessWidget {
 
   Widget _getHeaderProfile() {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 18),
+      padding: const EdgeInsets.symmetric(horizontal: 18),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -171,18 +171,18 @@ class UserProfileScreen extends StatelessWidget {
             width: 70,
             height: 70,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.all(
+              borderRadius: const BorderRadius.all(
                 Radius.circular(17),
               ),
               border: Border.all(
                 width: 2,
-                color: Color(0xffF35383),
+                color: const Color(0xffF35383),
               ),
             ),
             child: Padding(
-              padding: EdgeInsets.all(2.0),
+              padding: const EdgeInsets.all(2.0),
               child: ClipRRect(
-                borderRadius: BorderRadius.all(Radius.circular(13)),
+                borderRadius: const BorderRadius.all(Radius.circular(13)),
                 child: FittedBox(
                   fit: BoxFit.cover,
                   child: Image.asset('images/ben2.jpg'),
@@ -190,14 +190,14 @@ class UserProfileScreen extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(width: 15),
-          Container(
+          const SizedBox(width: 15),
+          SizedBox(
             height: 70,
             child: Center(
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
+                children: const [
                   Text(
                     'بهادر فولادی',
                     style: TextStyle(
@@ -219,7 +219,7 @@ class UserProfileScreen extends StatelessWidget {
               ),
             ),
           ),
-          Spacer(),
+          const Spacer(),
           Image.asset('images/icon_profile_edit.png'),
         ],
       ),
@@ -235,7 +235,7 @@ class TabBarViewDelegate extends SliverPersistentHeaderDelegate {
   Widget build(
       BuildContext context, double shrinkOffset, bool overlapsContent) {
     return Container(
-      color: Color(0xff1C1F2E),
+      color: const Color(0xff1C1F2E),
       child: _tabBar,
     );
   }
